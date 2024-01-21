@@ -9,8 +9,6 @@
     <meta name="csrf-token" content="{{ csrf_token() }}">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
     <script src="https://kit.fontawesome.com/8852491f3e.js" crossorigin="anonymous"></script>
-    <link href="{{asset('assets/Admin/css/adminStyle.css')}}" rel="stylesheet">
-    <link href="{{asset('assets/Admin/css/mediaStyles.css')}}" rel="stylesheet">
     <link href="{{asset('assets/vendor/bootstrap/css/bootstrap.css')}}" rel="stylesheet">
     <script src="https://cdn.tiny.cloud/1/cnq0lru5kyw1l91wheqtvnshbrf9ybehmpbfy8ltckq29dbs/tinymce/6/tinymce.min.js" referrerpolicy="origin"></script>
     <script>
@@ -27,6 +25,8 @@
             ai_request: (request, respondWith) => respondWith.string(() => Promise.reject("See docs to implement AI Assistant")),
         });
     </script>
+    <link href="{{asset('assets/Admin/css/adminStyle.css')}}" rel="stylesheet">
+    <link href="{{asset('assets/Admin/css/mediaStyles.css')}}" rel="stylesheet">
     <title>Document</title>
 </head>
 <body>

@@ -25,8 +25,8 @@
             ai_request: (request, respondWith) => respondWith.string(() => Promise.reject("See docs to implement AI Assistant")),
         });
     </script>
-    <link href="{{asset('assets/Admin/css/adminStyle.css')}}" rel="stylesheet">
-    <link href="{{asset('assets/Admin/css/mediaStyles.css')}}" rel="stylesheet">
+    <link href="{{asset('assets/admin/css/adminStyle.css')}}" rel="stylesheet">
+    <link href="{{asset('assets/admin/css/mediaStyles.css')}}" rel="stylesheet">
     <title>Document</title>
 </head>
 <body>

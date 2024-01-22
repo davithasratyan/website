@@ -20,7 +20,7 @@
                                 <p class="card-text card-date"><small
                                         class="text-muted">{{ \Carbon\Carbon::parse($searchResult->time_date)->isoFormat('DD MMMM Y', 'months') }}</small>
                                 </p>
-                                <p class="card-text text-dark card-article">{{ Str::limit($searchResult->article, 80, '...') }}</p>
+                                <div class="card-text text-dark card-article">{!! Str::limit($searchResult->article, 80, '...') !!}</div>
                             </div>
                         </div>
                     </div>

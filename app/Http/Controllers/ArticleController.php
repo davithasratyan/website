@@ -12,6 +12,7 @@ use App\Models\Tags;
 use Carbon\Carbon;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\File;
+use Illuminate\Support\Facades\Validator;
 
 class ArticleController extends Controller
 {
@@ -36,7 +37,24 @@ class ArticleController extends Controller
         }
 
         $post->status = $request->status;
-        $request->date ? $post->time_date = $request->date : $post->time_date = Carbon::now();
+        try {
+            $validator = Validator::make($request->all(), [
+                'date' => 'nullable|date_format:Y-m-d H:i:s',
+            ]);
+
+            if ($validator->fails()) {
+                throw new \Exception('Invalid date format');
+            }
+
+            $post->time_date = $request->date ? Carbon::parse($request->date) : Carbon::now();
+            $post->save();
+
+            // Redirect or do other actions if needed
+
+        } catch (\Exception $e) {
+            return back()->withErrors(['date' => $e->getMessage()])->withInput();
+        }
+//        $request->date ? $post->time_date = $request->date : $post->time_date = Carbon::now();
         $post->save();
 
         $articleStatus = new Status();

@@ -18,7 +18,7 @@
                                 <p class="card-text card-date"><small
                                         class="text-muted">{{ \Carbon\Carbon::parse($categoryPost->time_date)->isoFormat('DD MMMM Y', 'months') }}</small>
                                 </p>
-                                <p class="card-text text-dark card-article">{{Str::limit($categoryPost->article, 80, '...')}}</p>
+                                <p class="card-text text-dark card-article">{!!Str::limit($categoryPost->article, 80, '...')!!}</p>
                             </div>
                         </div>
                     </div>

@@ -17,7 +17,7 @@
                         @endphp
                     </small>
                 </p>
-                <p class="card-text card-article">{{Str::limit($post->article, 100, '...')}}</p>
+                <div class="card-text card-article">{!!Str::limit($post->article, 100, '...')!!}</div>
             </div>
         </div>
     </div>

@@ -15,7 +15,7 @@
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav mx-auto mb-2 mb-lg-0">
                 @foreach ($categories as $category)
-                    @if($category->status == 1)
+                    @if($category->parent_id == 0)
                         <li class="nav-item @if(count($category->children)) dropdown @endif">
                             <a class="nav-link @if(count($category->children)) dropdown-toggle @endif"
                                @if(count($category->children)) id="navbarDropdown_{{$category->id}}" role="button"

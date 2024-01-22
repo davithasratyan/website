@@ -1,5 +1,5 @@
 @extends('mainPage.layouts.app')
-@section('title', 'Arminsider.am')
+@section('title', 'MediaMess')
 @section('content')
     <!-- Slider -->
     <section class="main-slider">

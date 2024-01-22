@@ -2,7 +2,7 @@
 $contacts = getContact();
 @endphp
 
-<footer class="footer-section">
+<footer class="footer-section" id="#footer">
     <div class="container">
         <div class="footer-content pt-5 pb-5">
             <div class="row">
@@ -12,7 +12,7 @@ $contacts = getContact();
                             <a href="#"><img src="{{asset('assets/icons/logo.png')}}" class="img-fluid" alt="logo"></a>
                         </div>
                         <div class="footer-text">
-                            <p> Մեջբերումներ անելիս ակտիվ հղումը <span class="text-white">ArmInsider</span>-ին պարտադիր է: Կայքի հոդվածների մասնակի հեռուստառադիոընթերցումն առանց <span class="text-white">ArmInsider</span>-ին հղման արգելվում է: Կայքում արտահայտված կարծիքները պարտադիր չէ, որ համընկնեն կայքի խմբագրության տեսակետի հետ:
+                            <p> Մեջբերումներ անելիս ակտիվ հղումը <span class="text-white">MediaMess</span>-ին պարտադիր է: Կայքի հոդվածների մասնակի հեռուստառադիոընթերցումն առանց <span class="text-white">MediaMess</span>-ին հղման արգելվում է: Կայքում արտահայտված կարծիքները պարտադիր չէ, որ համընկնեն կայքի խմբագրության տեսակետի հետ:
                             </p>
                         </div>
                     </div>
@@ -75,8 +75,8 @@ $contacts = getContact();
                 <div class="col-xl-6 col-lg-6 d-none d-lg-block text-right">
                     <div class="footer-menu">
                         <ul>
-{{--                            <li><a href="#">Հեստադարձ կապ</a></li>--}}
-                            <li><a href="#">Մեր մասին</a></li>
+                            <li><a href="#footer">Հեստադարձ կապ</a></li>
+                            <li><a href="#footer">Մեր մասին</a></li>
 {{--                            <li><a href="#">Գովազդատուների համար</a></li>--}}
                         </ul>
                     </div>

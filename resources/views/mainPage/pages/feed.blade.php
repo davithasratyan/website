@@ -11,7 +11,8 @@
     <link href="{{asset('assets/styles/style.css')}}" rel="stylesheet">
     <link href="{{asset('assets/styles/mediaCss.css')}}" rel="stylesheet">
     <link href="{{asset('assets/styles/articlePageStyle.css')}}" rel="stylesheet">
-    <title>@yield('title')</title>
+    <link rel="icon" href="{{asset('assets/icons/x-icon.png')}}" type="image/x-icon">
+    <title>@yield('title', 'Լրահոս')</title>
 </head>
 <body>
 

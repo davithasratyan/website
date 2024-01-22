@@ -14,10 +14,10 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/lightgallery@1.10.0/dist/css/lightgallery.min.css" />
     <script src="https://cdn.jsdelivr.net/npm/lightgallery@1.10.0/dist/js/lightgallery.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/lightgallery@1.10.0/dist/js/plugins/lg-thumbnail.min.js"></script>
+    <link rel="icon" href="{{asset('assets/icons/x-icon.png')}}" type="image/x-icon">
     <title>@yield('title')</title>
 </head>
 <body>
-
 <header>
     @include('mainPage.layouts.header')
 </header>

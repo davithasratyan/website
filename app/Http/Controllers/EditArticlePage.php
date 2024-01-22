@@ -50,6 +50,7 @@ class EditArticlePage extends Controller
         }
 
         $post->status = $request->status;
+//        $post->time_date = $request->date;
         try {
             $validator = Validator::make($request->all(), [
                 'date' => 'nullable|date_format:Y-m-d H:i:s',
@@ -60,10 +61,14 @@ class EditArticlePage extends Controller
             }
 
             $post->time_date = $request->date ? Carbon::parse($request->date) : Carbon::now();
+            $post->save();
 
-//        $post->time_date = $request->date;
+            // Redirect or do other actions if needed
 
-        $post->save();
+        } catch (\Exception $e) {
+            return back()->withErrors(['date' => $e->getMessage()])->withInput();
+        }
+
         PostTags::where('post_id', $post->id)->delete();
 
 // Insert the new tags

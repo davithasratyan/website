@@ -16,6 +16,7 @@ class PageController extends Controller
 
         $firstPostTags = PostTags::where('post_id', $id)->with('post', 'tag')->get();
         $relatedPosts = [];
+
         if (!$firstPostTags->isEmpty()) {
             $tagName = $firstPostTags->first()->tag->name;
 
@@ -69,7 +70,10 @@ class PageController extends Controller
             'categories'=>$categories,
             'photos'=>$photos,
             'favorites'=>$favorites,
-            'relatedPosts'=>$relatedPosts
+            'relatedPosts'=>$relatedPosts,
+            'ogTitle' => $singlePost->title,
+            'ogImage' => $singlePost->main_image,
+            'ogDescription' => $singlePost->article,
         ]);
     }
 

@@ -1,4 +1,7 @@
 @extends('mainPage.layouts.app')
+@section('ogTitle', $ogTitle)
+@section('ogImage', $ogImage)
+@section('ogDescription', $ogDescription)
 @section('title', $singlePost->title ?? 'լուր')
 @section('content')
         <section class="category_article_block">

@@ -5,9 +5,9 @@
     <meta name="viewport"
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <meta property="og:title" content="@yield('ogTitle', 'Default Title')" />
-    <meta property="og:image" content="@yield('ogImage', 'URL to Default Image')" />
-    <meta property="og:description" content="@yield('ogDescription', 'Default Description')" />
+    <meta property="og:title" content="title" />
+    <meta property="og:image" content="@yield('ogImage')" />
+    <meta property="og:description" content="desc" />
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
     <script src="https://kit.fontawesome.com/8852491f3e.js" crossorigin="anonymous"></script>
     <link href="{{asset('assets/vendor/bootstrap/css/bootstrap.css')}}" rel="stylesheet">

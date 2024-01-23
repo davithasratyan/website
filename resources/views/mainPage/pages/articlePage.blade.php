@@ -2,8 +2,8 @@
 @section('ogTitle', $ogTitle)
 @section('ogImage', $ogImage)
 @section('ogDescription', $ogDescription)
-@section('title', $singlePost->title ?? 'լուր')
 @section('content')
+    @dd($ogDescription)
         <section class="category_article_block">
             @if($singlePost->title)
                 <h1 class="category_title_block text-start">{{$singlePost->title}}</h1>

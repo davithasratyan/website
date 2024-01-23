@@ -5,3 +5,4 @@ function getContact()
 {
     return FeedBack::all();
 }
+

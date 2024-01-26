@@ -73,7 +73,7 @@ class PageController extends Controller
             'relatedPosts'=>$relatedPosts,
             'ogTitle' => $singlePost->title,
             'ogImage' => $singlePost->main_image,
-            'ogDescription' => $singlePost->article,
+            'ogDescription' => strip_tags($singlePost->article),
             'ogId' => $singlePost->id,
         ]);
     }

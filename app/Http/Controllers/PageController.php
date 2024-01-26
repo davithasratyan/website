@@ -74,6 +74,7 @@ class PageController extends Controller
             'ogTitle' => $singlePost->title,
             'ogImage' => $singlePost->main_image,
             'ogDescription' => $singlePost->article,
+            'ogId' => $singlePost->id,
         ]);
     }
 

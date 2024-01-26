@@ -5,9 +5,6 @@
     <meta name="viewport"
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <meta property="og:title" content="title" />
-    <meta property="og:image" content="@yield('ogImage')" />
-    <meta property="og:description" content="desc" />
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
     <script src="https://kit.fontawesome.com/8852491f3e.js" crossorigin="anonymous"></script>
     <link href="{{asset('assets/vendor/bootstrap/css/bootstrap.css')}}" rel="stylesheet">
@@ -19,6 +16,12 @@
     <script src="https://cdn.jsdelivr.net/npm/lightgallery@1.10.0/dist/js/plugins/lg-thumbnail.min.js"></script>
     <link rel="icon" href="{{asset('assets/icons/x-icon.png')}}" type="image/x-icon">
     <title>@yield('title')</title>
+    <meta name="keywords" content="նորություններ, լուրեր, լուր, մամուլ, լրատվական,  norutyunner, lurer" />
+    <meta property="og:url"  content="@yield('url')" />
+    <meta property="og:type" content="article" />
+    <meta property="og:title"  content="@yield('ogTitle')" />
+    <meta property="og:description"  content="@yield('description')" />
+    <meta property="og:image"   content="@yield('image')" />
 </head>
 <body>
 <header>

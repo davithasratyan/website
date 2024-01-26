@@ -24,6 +24,8 @@
     <meta property="og:image"   content="@yield('image')" />
 </head>
 <body>
+<div id="fb-root"></div>
+<script async defer crossorigin="anonymous" src="https://connect.facebook.net/en_GB/sdk.js#xfbml=1&version=v19.0&appId=2181682642150711" nonce="hjluxNTS"></script>
 <header>
     @include('mainPage.layouts.header')
 </header>

@@ -7,7 +7,7 @@
     @else
         <h5 class="searchText">{{'Որոնման արդյունքները «'.$searchTerm . '» հարցումով'}}</h5>
         @foreach($searchResults as $searchResult)
-            <a href="{{ route('page', ['id' => $searchResult->id]) }}">
+            <a href="{{ route('page', ['p' => $searchResult->id]) }}">
                 <div class="card my-5 border-0" style="max-width: 710px;">
                     <div class="row g-0">
                         <div class="col-md-4 col-sm-4 d-flex align-items-center card_image-block">

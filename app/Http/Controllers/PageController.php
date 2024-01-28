@@ -6,14 +6,14 @@ use App\Http\Requests\SearchRequest;
 use App\Models\Category;
 use App\Models\Post;
 use App\Models\PostTags;
-use App\Models\Tags;
 use Illuminate\Pagination\LengthAwarePaginator;
 use Illuminate\Support\Carbon;
+use Illuminate\Http\Request;
 
 class PageController extends Controller
 {
-    public function index($id) {
-
+    public function index(Request $request) {
+        $id = $request->query('p');
         $firstPostTags = PostTags::where('post_id', $id)->with('post', 'tag')->get();
         $relatedPosts = [];
 

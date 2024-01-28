@@ -19,7 +19,7 @@
                         </div>
                         @foreach($category->posts()->latest()->take(2)->get() as $post)
                             @if($post->status !== 0)
-                                <a href="{{route('page', ['id'=>$post->id])}}">
+                                <a href="{{route('page', ['p'=>$post->id])}}">
                                     @include('mainPage.components.card', ['post' => $post])
                                 </a>
                             @endif

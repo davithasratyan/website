@@ -51,16 +51,22 @@
             @endif
         </section>
         <section>
-            <div class="fb-share-button" data-href="{{route('page', ['id'=>$ogId])}}" data-layout="" data-size=""><a target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fdevelopers.facebook.com%2Fdocs%2Fplugins%2F&amp;src=sdkpreparse" class="fb-xfbml-parse-ignore">Share</a></div>
+            <div class="fb-share-button"
+                 data-href="{{route('page', ['id'=>$ogId])}}"
+                 data-layout="button_count">
+            </div>
 {{--            <ul class="articleSharer list-unstyled d-flex">--}}
-{{--                <li><a class="btn btn-primary share_btn"--}}
-{{--                       href="https://www.facebook.com/sharer/sharer.php?u={{route('page', ['id'=>$singlePost->id])}}"--}}
-{{--                       target="_blank">@include('mainPage.icons.facebook')Facebook</a></li>--}}
+{{--                <li class="fb-share-button" data-href="{{route('page', ['id'=>$ogId])}}" data-layout="" data-size="">--}}
+{{--                    <a class="btn btn-primary share_btn fb-share-button" target="_blank"--}}
+{{--                       href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fdevelopers.facebook.com%2Fdocs%2Fplugins%2F&amp;src=sdkpreparse" class="fb-xfbml-parse-ignore">--}}
+{{--                        @include('mainPage.icons.facebook')Facebook--}}
+{{--                    </a>--}}
+{{--                </li>--}}
 {{--                <li><a class="btn btn-info share_btn"--}}
 {{--                       href="https://t.me/share/url?url={{route('page', ['id'=>$singlePost->id])}}"--}}
 {{--                       target="_blank">@include('mainPage.icons.telegram')Telegram</a></li>--}}
 {{--            </ul>--}}
-{{--        </section>--}}
+        </section>
         <section class="relatedArticles_block">
             @if($relatedPosts)
             <h5 class="relatedArticles_block_title">Այս թեմայով</h5>

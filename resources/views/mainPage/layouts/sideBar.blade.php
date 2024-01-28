@@ -25,7 +25,7 @@
                     @if($posts)
                         @foreach($posts as $post)
                             @if($post->articleStatus->hideCheck !== 1)
-                                <a href="{{route('page', ['id'=>$post->id])}}" class="news-card">
+                                <a href="{{route('page', ['p'=>$post->id])}}" class="news-card">
                                     <img src="{{ asset('storage/images/mainImage/' . $post->main_image) }}">
                                     <span
                                         class="@if($post->articleStatus->boldCheck == 1) fw-bolder @endif">{{ Str::limit($post->title, 75, '...') }}</span>
@@ -49,7 +49,7 @@
                 <hr>
                 <section class="d-flex flex-column justify-content-center align-items-center">
                     @foreach($photos as $photo)
-                        <a href="{{route('page', ['id'=>$photo->id])}}}}">
+                        <a href="{{route('page', ['p'=>$photo->id])}}}}">
                             @include('mainPage.components.photoCard', ['photo'=>$photo])
                         </a>
                     @endforeach

@@ -22,7 +22,7 @@ use App\Http\Controllers\CategoryController;
 
 Route::get('/', [HomePageController::class, 'index'])->name('mainPage');
 Route::get('/page', [PageController::class, 'pageCategory'])->name('pageCategory');
-Route::get('/news-{id}', [PageController::class, 'index'])->name('page');
+Route::get('/news', [PageController::class, 'index'])->name('page');
 Route::get('/category/{id}/{category}', [PageController::class, 'postsByCategory'])->name('postsByCategory');
 Route::get('/search', [PageController::class, 'search'])->name('search');
 Route::get('/feed', [PageController::class, 'feed'])->name('feed');

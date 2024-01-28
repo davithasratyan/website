@@ -7,7 +7,7 @@
     <div class="carousel-inner">
         @foreach($favorites as $key => $favorite)
         <div class="carousel-item mini-slider-item {{ $key === 0 ? 'active' : '' }}">
-            <a href="{{route('page', ['id'=>$favorite->id])}}">
+            <a href="{{route('page', ['p'=>$favorite->id])}}">
             <img src="{{asset('storage/images/mainImage/' . $favorite->main_image)}}" class="d-block w-100" alt="{{$favorite->title}}">
             <div class="carousel-caption mini-slider-caption d-none d-md-block">
                 <h5>{{ Str::limit($favorite->title, 90, '...') }}</h5>

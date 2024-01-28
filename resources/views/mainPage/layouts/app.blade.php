@@ -16,6 +16,7 @@
     <script src="https://cdn.jsdelivr.net/npm/lightgallery@1.10.0/dist/js/plugins/lg-thumbnail.min.js"></script>
     <link rel="icon" href="{{asset('assets/icons/x-icon.png')}}" type="image/x-icon">
     <title>@yield('title')</title>
+    <script src="https://yastatic.net/share2/share.js"></script>
     <meta name="keywords" content="նորություններ, լուրեր, լուր, մամուլ, լրատվական, lurer" />
     <meta property="og:url"  content="@yield('ogUrl')">
     <meta property="og:type" content="article"/>
@@ -52,7 +53,6 @@
         </div>
     </div>
 </main>
-
 <footer>
     @include('mainPage.layouts.footer')
 </footer>

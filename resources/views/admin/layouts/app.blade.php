@@ -11,6 +11,7 @@
     <script src="https://kit.fontawesome.com/8852491f3e.js" crossorigin="anonymous"></script>
     <link href="{{asset('assets/vendor/bootstrap/css/bootstrap.css')}}" rel="stylesheet">
     <script src="https://cdn.tiny.cloud/1/cnq0lru5kyw1l91wheqtvnshbrf9ybehmpbfy8ltckq29dbs/tinymce/6/tinymce.min.js" referrerpolicy="origin"></script>
+    <link rel="icon" href="{{asset('assets/icons/x-icon.png')}}" type="image/x-icon">
     <script>
         tinymce.init({
             selector: 'textarea',
@@ -40,7 +41,7 @@
         @include('admin.layouts.header')
     </div>
 
-    <main class="px-5">
+    <main class="px-5 py-5">
         @yield('admin-content')
     </main>
 </div>

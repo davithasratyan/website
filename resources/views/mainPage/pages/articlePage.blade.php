@@ -6,7 +6,7 @@
 @endif
 @section('ogUrl', route('page', ['p'=>$ogId]))
 @section('ogTitle', $ogTitle)
-@section('ogDes', $ogDescription)
+@section('ogDes', $ogTitle)
 @section('ogImage',  asset('storage/images/mainImage/' . $ogImage))
 @section('content')
      <section class="category_article_block">

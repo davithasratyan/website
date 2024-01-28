@@ -171,7 +171,7 @@ section {
 }
 .main-slider-caption > h5 {
     color: var(--white);
-    font-size: 20px;
+    font-size: 1.2rem;
     line-height: 1.6;
     font-family: Mardoto-Light;
     -webkit-line-clamp: 2;

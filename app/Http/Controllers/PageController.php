@@ -63,6 +63,7 @@ class PageController extends Controller
             ->where('time_date', '<=', $currentDateTime)
             ->limit(3)
             ->get();
+        $cleanArticle = strip_tags(html_entity_decode($singlePost->article));
 
         return view('mainPage.pages.articlePage', [
             'singlePost'=>$singlePost,
@@ -73,7 +74,7 @@ class PageController extends Controller
             'relatedPosts'=>$relatedPosts,
             'ogTitle' => $singlePost->title,
             'ogImage' => $singlePost->main_image,
-            'ogDescription' => html_entity_decode(strip_tags($singlePost->article)),
+            'ogDescription' => $cleanArticle,
             'ogId' => $singlePost->id,
         ]);
     }

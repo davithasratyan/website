@@ -1,8 +1,9 @@
 @extends('mainPage.layouts.app')
-@section('url', route('page', ['id'=>$ogId]))
+@section('title', $singlePost->title)
+@section('ogUrl', route('page', ['p'=>$ogId]))
 @section('ogTitle', $ogTitle)
-@section('description', $ogDescription)
-@section('image',  asset('storage/images/mainImage/' . $ogImage))
+@section('ogDes', $ogDescription)
+@section('ogImage',  asset('storage/images/mainImage/' . $ogImage))
 @section('content')
      <section class="category_article_block">
             @if($singlePost->title)

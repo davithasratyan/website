@@ -17,11 +17,11 @@
     <link rel="icon" href="{{asset('assets/icons/x-icon.png')}}" type="image/x-icon">
     <title>@yield('title')</title>
     <meta name="keywords" content="նորություններ, լուրեր, լուր, մամուլ, լրատվական,  norutyunner, lurer" />
-    <meta property="og:url"  content="@yield('url')" />
-    <meta property="og:type" content="article" />
+    <meta property="og:url"  content="@yield('ogUrl')" />
+    <meta property="og:type" content="article"/>
     <meta property="og:title"  content="@yield('ogTitle')" />
-    <meta property="og:description"  content="@yield('description')" />
-    <meta property="og:image"   content="@yield('image')" />
+    <meta property="og:description"  content="@yield('ogDes')" />
+    <meta property="og:image"   content="@yield('ogImage')" />
 </head>
 <body>
 <!-- Load Facebook SDK for JavaScript -->

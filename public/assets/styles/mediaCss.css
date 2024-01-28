@@ -1,5 +1,4 @@
 @media (max-width: 1024px) {
-
     .timeline a img {
         display: block;
         width: 75px;
@@ -25,7 +24,6 @@
     .main-slider-caption > h5 {
         font-size: 16px;
     }
-
 }
 
 

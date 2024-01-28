@@ -1,5 +1,9 @@
 @extends('mainPage.layouts.app')
-@section('title', $singlePost->title)
+@if($singlePost->title !== null)
+    @section('title', $singlePost->title)
+@else
+    @section('title', 'MediaMess.site')
+@endif
 @section('ogUrl', route('page', ['p'=>$ogId]))
 @section('ogTitle', $ogTitle)
 @section('ogDes', $ogDescription)

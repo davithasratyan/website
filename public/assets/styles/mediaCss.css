@@ -17,13 +17,13 @@
 
 @media (max-width: 991px) {
     .main-slider-caption > h5 {
-        font-size: 20px !important;
+        font-size: 18px !important;
     }
 }
 
 @media (max-width: 768px) {
     .main-slider-caption > h5 {
-        font-size: 19px !important;
+        font-size: 16px !important;
     }
 
 }
@@ -31,14 +31,14 @@
 
 @media (max-width: 557px) {
     .main-slider-caption > h5 {
-        font-size: 18px !important;
+        font-size: 14px !important;
     }
 
 }
 
 @media (max-width: 380px) {
     .main-slider-caption > h5 {
-        font-size: 16px !important;
+        font-size: 12px !important;
     }
     .carousel-control-prev-icon, .carousel-control-next-icon {
         width: 1rem !important;
@@ -50,13 +50,13 @@
 
 @media (max-width: 306px) {
     .main-slider-caption > h5 {
-        font-size: 15px !important;
+        font-size: 12px !important;
     }
 }
 
 @media (max-width: 155px) {
     .main-slider-caption > h5 {
-        font-size: 8px !important;
+        font-size: 10px !important;
     }
 
     .timeline a img {

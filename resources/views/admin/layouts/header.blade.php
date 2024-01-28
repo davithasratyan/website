@@ -1,4 +1,4 @@
-<nav class="navbar navbar-inverse navbar-expand-lg fixed-top border-0">
+<nav class="navbar navbar-inverse navbar-expand-lg" style="width: 100%">
     <div class="container-fluid">
         <div class="navbar-header">
             <a href="#" class="navbar-brand" id="sidebar-toggle"><i class="fa fa-bars"></i></a>

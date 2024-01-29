@@ -37,7 +37,6 @@
                         @endforeach
                     @endif
                 </section>
-
             </div>
             <div class="col-md-12">
                 @foreach($categories as $category)

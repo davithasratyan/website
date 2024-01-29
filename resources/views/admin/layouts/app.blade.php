@@ -31,7 +31,6 @@
     <title>Document</title>
 </head>
 <body>
-
 <div id="wrapper">
     <aside id="sidebar-wrapper">
         @include('admin.layouts.sideBar')
@@ -45,7 +44,6 @@
         @yield('admin-content')
     </main>
 </div>
-
 <script src="{{asset('assets/vendor/bootstrap/js/bootstrap.bundle.js')}}"></script>
 <script src="{{asset('assets/admin/js/adminScript.js')}}"></script>
 <script src="{{asset('assets/admin/js/refreshDate.js')}}"></script>

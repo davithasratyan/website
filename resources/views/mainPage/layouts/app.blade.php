@@ -16,6 +16,15 @@
     <script src="https://cdn.jsdelivr.net/npm/lightgallery@1.10.0/dist/js/plugins/lg-thumbnail.min.js"></script>
     <link rel="icon" href="{{asset('assets/icons/x-icon.png')}}" type="image/x-icon">
     <title>@yield('title')</title>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-B1D51QPBYG"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+
+        gtag('config', 'G-B1D51QPBYG');
+    </script>
     <script src="https://yastatic.net/share2/share.js"></script>
     <meta name="keywords" content="նորություններ, լուրեր, լուր, մամուլ, լրատվական, lurer" />
     <meta property="og:url"  content="@yield('ogUrl')">

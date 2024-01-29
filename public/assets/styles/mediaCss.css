@@ -26,6 +26,12 @@
     }
 }
 
+@media (max-width: 575px) {
+    .card-body {
+        padding: 1rem 0;
+    }
+
+}
 
 @media (max-width: 557px) {
     .main-slider-caption > h5 {

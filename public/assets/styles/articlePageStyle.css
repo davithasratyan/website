@@ -39,35 +39,6 @@
     color: #fff;
 }
 
-.articleSharer {
-    height: 24px;
-    padding: 10px 0;
-    border-top: 1px solid #f5f5f5;
-    margin: 10px 0;
-}
-
-
-.article p {
-    font-size: 16px;
-    font-family: Mardoto-Regular;
-    margin: 16px 0;
-}
-.share_btn {
-    /*background:rgb(0, 136, 204);*/
-    padding: 8px 12px;
-    color: #fff;
-    border-radius: 3px;
-    margin: 4px;
-    display: inline-block;
-    cursor: pointer;
-    text-align: center;
-    transition: .2s ease all;
-}
-
-.share_btn:hover {
-    transform: scale(1.05);
-    color: #fff;
-}
 #lightgallery {
     display: inline-block;
     width: 100%;
@@ -103,8 +74,16 @@
     padding: 10px 0;
     margin: 10px 0;
     display: flex;
-    align-items: center;
+    align-items: center !important;
+
 }
 .fb-share-button {
     padding-right: 10px;
+}
+
+.ya-share2 {
+    margin: 0;
+    padding-top: 3.5px;
+    display: flex;
+align-items: center;
 }

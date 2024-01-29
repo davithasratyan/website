@@ -32,7 +32,8 @@
                      data-href="{{route('page', ['p'=>$ogId])}}"
                      data-layout="button_count">
                 </div>
-                <div class="ya-share2" data-curtain data-lang="hy" data-services="telegram,twitter,linkedin"></div>
+
+                <div class="ya-share2" data-curtain data-size="s" data-lang="hy" data-shape="square" data-services="telegram,twitter,viber,whatsapp"></div>
             </div>
         <div class="category_main_block ratio ratio-16x9">
             @if(isset($singlePost->yt_link))

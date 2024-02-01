@@ -1,5 +1,6 @@
 @extends('admin.layouts.app')
 @section('admin-content')
+    <section>
     <form action="{{route('save_new_post')}}" method="post" enctype="multipart/form-data">
         @csrf
         <div class="row">
@@ -79,4 +80,5 @@
             </div>
         </div>
     </form>
+    </section>
 @endsection

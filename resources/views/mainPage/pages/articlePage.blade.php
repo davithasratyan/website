@@ -58,7 +58,7 @@
         <div class="sharethis-inline-share-buttons"></div>
     </div>
     <section class="relatedArticles_block">
-        @if(!$relatedPosts->isEmpty())
+        @if(!empty($relatedPosts))
             <h5 class="relatedArticles_block_title">Այս թեմայով</h5>
             @foreach ($relatedPosts as $relatedPost)
                 <a href="{{route('page', ['id'=>$relatedPost->post->id])}}" class="clearfix">

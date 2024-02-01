@@ -1,7 +1,6 @@
-<nav class="navbar navbar-inverse" style="width: 100%">
+<nav class="navbar navbar-inverse">
     <div class="container-fluid">
         <div class="navbar-header">
-{{--            <a href="#" class="navbar-brand" id="sidebar-toggle"><i class="fa fa-bars"></i></a>--}}
             <div class="dropdown float-end px-5 me-5">
                 @if(auth()->user()->role === 'admin')
                 <button class="btn dropdown-toggle border-0" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">

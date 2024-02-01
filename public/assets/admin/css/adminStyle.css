@@ -99,7 +99,6 @@ a:focus {
 
 #navbar-wrapper {
     width: 100%;
-    position: absolute;
     z-index: 2;
 }
 #wrapper.toggled #navbar-wrapper {
@@ -112,10 +111,6 @@ a:focus {
     font-size: 24px;
     margin-bottom: 0;
     border-radius: 0;
-    position: fixed;
-    top: 0;
-    left: 0;
-    right: 0;
 }
 
 #navbar-wrapper .navbar a {

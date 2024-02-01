@@ -40,7 +40,7 @@
         @include('admin.layouts.header')
     </div>
 
-    <main class="px-5 py-5">
+    <main class="px-5">
         @yield('admin-content')
     </main>
 </div>

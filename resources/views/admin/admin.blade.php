@@ -1,6 +1,6 @@
 @extends('admin.layouts.app')
 @section('admin-content')
-    <section class="px-3">
+    <section class="px-3 mt-5">
         <table class="table">
             <thead>
             <tr>

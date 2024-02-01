@@ -2,7 +2,6 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\Category;
 use App\Models\Contacts;
 use App\Models\FeedBack;
 use App\Models\Post;

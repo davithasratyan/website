@@ -46,10 +46,14 @@ a:focus {
     position: absolute;
     top: 0;
     width: 250px;
-    text-align: center;
     padding: 10px 0;
     background: #f6f3f3;
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    cursor: pointer;
 }
+
 .sidebar-brand h2 {
     display: block;
     color: #666;
@@ -57,8 +61,12 @@ a:focus {
     line-height: 20px;
     height: 20px;
     margin-top: 10px;
+    padding: 0 10px;
 }
 
+.sidebar-brand .fa-bars {
+    padding: 0 25px;
+}
 .sidebar-nav {
     position: absolute;
     top: 75px;
@@ -104,6 +112,10 @@ a:focus {
     font-size: 24px;
     margin-bottom: 0;
     border-radius: 0;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
 }
 
 #navbar-wrapper .navbar a {

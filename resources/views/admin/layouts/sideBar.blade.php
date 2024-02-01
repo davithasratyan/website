@@ -1,4 +1,5 @@
-<div class="sidebar-brand">
+<div class="sidebar-brand" id="sidebar-toggle">
+    <i class="fa fa-bars"></i>
     <h2>sPanel</h2>
 </div>
 <ul class="sidebar-nav">

@@ -27,14 +27,6 @@
                          }
                      @endphp
             </span>
-            <div class="articleSharer my-3">
-                <div class="fb-share-button"
-                     data-href="{{route('page', ['p'=>$ogId])}}"
-                     data-layout="button_count">
-                </div>
-
-                <div class="ya-share2" data-curtain data-size="s" data-lang="hy" data-shape="square" data-services="telegram,twitter,viber,whatsapp"></div>
-            </div>
         <div class="category_main_block ratio ratio-16x9">
             @if(isset($singlePost->yt_link))
                 <iframe width="100%" height="100%" src="https://www.youtube.com/embed/{{$singlePost->yt_link}}"
@@ -62,8 +54,11 @@
             </div>
         @endif
     </section>
+    <div>
+        <div class="sharethis-inline-share-buttons"></div>
+    </div>
     <section class="relatedArticles_block">
-        @if($relatedPosts)
+        @if(!$relatedPosts->isEmpty())
             <h5 class="relatedArticles_block_title">Այս թեմայով</h5>
             @foreach ($relatedPosts as $relatedPost)
                 <a href="{{route('page', ['id'=>$relatedPost->post->id])}}" class="clearfix">

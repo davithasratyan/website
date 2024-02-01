@@ -4,7 +4,6 @@ namespace App\Models;
 
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
-use Illuminate\Database\Eloquent\Relations\MorphToMany;
 use Illuminate\Database\Eloquent\SoftDeletes;
 
 class Post extends Model
@@ -17,7 +16,8 @@ class Post extends Model
         'yt_link',
         'main_image',
         'time_date',
-        'status'
+        'status',
+        'views'
     ];
     protected $casts = [
         'time_date' => 'datetime',

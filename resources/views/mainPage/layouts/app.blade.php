@@ -16,7 +16,7 @@
     <script src="https://cdn.jsdelivr.net/npm/lightgallery@1.10.0/dist/js/plugins/lg-thumbnail.min.js"></script>
     <link rel="icon" href="{{asset('assets/icons/x-icon.png')}}" type="image/x-icon">
     <title>@yield('title')</title>
-    <!-- Google tag (gtag.js) -->
+    <script type="text/javascript" src="https://platform-api.sharethis.com/js/sharethis.js#property=65ba105e3625b4001a8bcdee&product=inline-share-buttons&source=platform" async="async"></script>    <!-- Google tag (gtag.js) -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-B1D51QPBYG"></script>
     <script>
         window.dataLayer = window.dataLayer || [];
@@ -25,7 +25,6 @@
 
         gtag('config', 'G-B1D51QPBYG');
     </script>
-    <script src="https://yastatic.net/share2/share.js"></script>
     <meta name="keywords" content="նորություններ, լուրեր, լուր, մամուլ, լրատվական, lurer" />
     <meta property="og:url"  content="@yield('ogUrl')">
     <meta property="og:type" content="article"/>
@@ -34,16 +33,7 @@
     <meta property="og:image"  content="@yield('ogImage')">
 </head>
 <body>
-<!-- Load Facebook SDK for JavaScript -->
-<div id="fb-root"></div>
-<script>(function(d, s, id) {
-        var js, fjs = d.getElementsByTagName(s)[0];
-        if (d.getElementById(id)) return;
-        js = d.createElement(s); js.id = id;
-        js.src = "https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v3.0";
-        fjs.parentNode.insertBefore(js, fjs);
-    }(document, 'script', 'facebook-jssdk'));
-</script>
+
 <header>
     @include('mainPage.layouts.header')
 </header>

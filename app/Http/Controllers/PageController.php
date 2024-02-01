@@ -9,11 +9,53 @@ use App\Models\PostTags;
 use Illuminate\Pagination\LengthAwarePaginator;
 use Illuminate\Support\Carbon;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Session;
 
 class PageController extends Controller
 {
     public function index(Request $request) {
         $id = $request->query('p');
+        $singlePost = $this->fetchSinglePost($id);
+        $this->incrementPostViews($id);
+        $relatedPosts = $this->fetchRelatedPosts($id);
+        $categories = $this->fetchCategories();
+        $posts = $this->fetchPosts();
+        $photos = $this->fetchPhotos();
+        $favorites = $this->fetchFavorites();
+        $ogData = $this->prepareOpenGraphData($singlePost);
+
+        return view('mainPage.pages.articlePage', [
+            'singlePost' => $singlePost,
+            'posts' => $posts,
+            'categories' => $categories,
+            'photos' => $photos,
+            'favorites' => $favorites,
+            'relatedPosts' => $relatedPosts,
+            'ogTitle' => $ogData['title'],
+            'ogImage' => $ogData['image'],
+            'ogDescription' => $ogData['description'],
+            'ogId' => $ogData['id'],
+        ]);
+    }
+
+    protected function fetchSinglePost($id) {
+        return Post::with(['categories' => function ($query) use ($id) {
+            $query->where('post_id', $id);
+        }])
+            ->with('articleImages')
+            ->where('id', $id)
+            ->first();
+    }
+
+    protected function incrementPostViews($id) {
+        $viewedKey = 'post_viewed_' . $id;
+        if (!Session::has($viewedKey)) {
+            Post::find($id)->increment('views');
+            Session::put($viewedKey, true);
+        }
+    }
+
+    protected function fetchRelatedPosts($id) {
         $firstPostTags = PostTags::where('post_id', $id)->with('post', 'tag')->get();
         $relatedPosts = [];
 
@@ -32,22 +74,28 @@ class PageController extends Controller
                 ->get();
         }
 
-        $currentDateTime = Carbon::now();
-        $singlePost = Post::with(['categories' => function ($query) use ($id) {
-            $query->where('post_id', $id);
-        }])
-            ->with('articleImages')
-            ->where('id', $id)
-            ->first();
+        return $relatedPosts;
+    }
 
-        $categories = Category::with('posts', 'children')->get();
-        $posts = Post::with('articleStatus')
+    protected function fetchCategories() {
+        return Category::with('posts', 'children')->get();
+    }
+
+    protected function fetchPosts() {
+        $currentDateTime = Carbon::now();
+
+        return Post::with('articleStatus')
             ->where('status', '!=', 0)
             ->where('time_date', '<=', $currentDateTime)
             ->limit(100)
             ->orderBy('time_date', 'desc')
             ->get();
-        $photos = Post::whereHas('categories', function ($query) {
+    }
+
+    protected function fetchPhotos() {
+        $currentDateTime = Carbon::now();
+
+        return Post::whereHas('categories', function ($query) {
             $query->where('category', 'photos');
         })
             ->where('status', '!=', 0)
@@ -55,7 +103,12 @@ class PageController extends Controller
             ->limit(6)
             ->orderBy('time_date', 'desc')
             ->get();
-        $favorites = Post::with('articleStatus')
+    }
+
+    protected function fetchFavorites() {
+        $currentDateTime = Carbon::now();
+
+        return Post::with('articleStatus')
             ->whereHas('articleStatus', function ($query) {
                 $query->where('favCheck', 1);
             })
@@ -63,21 +116,19 @@ class PageController extends Controller
             ->where('time_date', '<=', $currentDateTime)
             ->limit(3)
             ->get();
+    }
+
+    protected function prepareOpenGraphData($singlePost) {
         $cleanArticle = strip_tags(html_entity_decode($singlePost->article));
 
-        return view('mainPage.pages.articlePage', [
-            'singlePost'=>$singlePost,
-            'posts'=>$posts,
-            'categories'=>$categories,
-            'photos'=>$photos,
-            'favorites'=>$favorites,
-            'relatedPosts'=>$relatedPosts,
-            'ogTitle' => $singlePost->title,
-            'ogImage' => $singlePost->main_image,
-            'ogDescription' => $cleanArticle,
-            'ogId' => $singlePost->id,
-        ]);
+        return [
+            'title' => $singlePost->title,
+            'image' => $singlePost->main_image,
+            'description' => $cleanArticle,
+            'id' => $singlePost->id,
+        ];
     }
+
 
     public function postsByCategory ($id) {
 

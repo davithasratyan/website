@@ -48,7 +48,7 @@
                 <hr>
                 <section class="d-flex flex-column justify-content-center align-items-center">
                     @foreach($photos as $photo)
-                        <a href="{{route('page', ['p'=>$photo->id])}}}}">
+                        <a href="{{route('page', ['p'=>$photo->id])}}">
                             @include('mainPage.components.photoCard', ['photo'=>$photo])
                         </a>
                     @endforeach

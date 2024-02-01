@@ -10,6 +10,7 @@ use Illuminate\Pagination\LengthAwarePaginator;
 use Illuminate\Support\Carbon;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Session;
+use Illuminate\Support\Str;
 
 class PageController extends Controller
 {
@@ -33,7 +34,7 @@ class PageController extends Controller
             'relatedPosts' => $relatedPosts,
             'ogTitle' => $ogData['title'],
             'ogImage' => $ogData['image'],
-            'ogDescription' => $ogData['description'],
+            'ogDescription' =>  Str::limit($ogData['description'], 100),
             'ogId' => $ogData['id'],
         ]);
     }

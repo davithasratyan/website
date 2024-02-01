@@ -25,12 +25,29 @@
 
         gtag('config', 'G-B1D51QPBYG');
     </script>
+    <meta name="description" content="@yield('description')" />
     <meta name="keywords" content="նորություններ, լուրեր, լուր, մամուլ, լրատվական, lurer" />
-    <meta property="og:url"  content="@yield('ogUrl')">
-    <meta property="og:type" content="article"/>
-    <meta property="og:title"  content="@yield('ogTitle')">
-    <meta property="og:description"  content="@yield('ogDes')">
-    <meta property="og:image"  content="@yield('ogImage')">
+
+    <!-- Schema.org markup for Google+ -->
+    <meta itemprop="name" content="@yield('googleName')">
+    <meta itemprop="description" content="@yield('googleDes')">
+    <meta itemprop="image" content="@yield('googleImg')">
+    <meta name="copyright" content="Copyright &copy; 2024 MediaNess.site. All rights reserved." />
+
+    <!-- Twitter Card data -->
+    <meta name="twitter:title" content="@yield('twitterTitle')">
+    <meta name="twitter:description" content="@yield('twitterDesc')">
+    <!-- Twitter summary card with large image must be at least 280x150px -->
+    <meta name="twitter:image:src" content="@yield('twitterImg')">
+
+    <!-- Open Graph data -->
+    <meta property="og:title" content="@yield('ogTitle')" />
+    <meta property="og:type" content="article" />
+    <meta property="og:url" content="@yield('ogUrl')" />
+    <meta property="og:image" content="@yield('ogImage')" />
+    <meta property="og:description" content="@yield('ogDes')" />
+    <meta property="og:site_name" content="mediamess.site"/>
+    <!-- meta tags END -->
 </head>
 <body>
 

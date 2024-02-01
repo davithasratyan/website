@@ -4,10 +4,18 @@
 @else
     @section('title', 'MediaMess.site')
 @endif
-@section('ogUrl', route('page', ['p'=>$ogId]))
+@section('description', $ogTitle)
+@section('googleName', $ogTitle)
+@section('googleDes', $ogDescription)
+@section('googleImg', asset('storage/images/mainImage/' . $ogImage))
+@section('twitterTitle', $ogTitle)
+@section('twitterDesc', $ogDescription)
+@section('twitterImg', asset('storage/images/mainImage/' . $ogImage))
 @section('ogTitle', $ogTitle)
-@section('ogDes', $ogTitle)
-@section('ogImage',  asset('storage/images/mainImage/' . $ogImage))
+@section('ogUrl', route('page', ['p'=>$ogId]))
+@section('ogImage', asset('storage/images/mainImage/' . $ogImage))
+@section('ogDes', $ogDescription)
+
 @section('content')
     <section class="category_article_block">
         @if($singlePost->title)

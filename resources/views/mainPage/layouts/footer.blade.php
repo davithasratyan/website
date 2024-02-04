@@ -75,7 +75,7 @@ $contacts = getContact();
                 <div class="col-xl-6 col-lg-6 d-none d-lg-block text-right">
                     <div class="footer-menu">
                         <ul>
-                            <li><a href="#footer">Հեստադարձ կապ</a></li>
+                            <li><a href="#footer">Հետադարձ կապ</a></li>
                             <li><a href="#footer">Մեր մասին</a></li>
 {{--                            <li><a href="#">Գովազդատուների համար</a></li>--}}
                         </ul>

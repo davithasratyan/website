@@ -4,17 +4,17 @@
 @else
     @section('title', 'MediaMess.site')
 @endif
-@section('description', $ogTitle)
-@section('googleName', $ogTitle)
-@section('googleDes', $ogDescription)
-@section('googleImg', asset('storage/images/mainImage/' . $ogImage))
-@section('twitterTitle', $ogTitle)
-@section('twitterDesc', $ogDescription)
-@section('twitterImg', asset('storage/images/mainImage/' . $ogImage))
-@section('ogTitle', $ogTitle)
-@section('ogUrl', route('page', ['p'=>$ogId]))
-@section('ogImage', asset('storage/images/mainImage/' . $ogImage))
-@section('ogDes', $ogDescription)
+@section('description', $singlePost->title)
+@section('googleName', $singlePost->title)
+@section('googleDes', $singlePost->article)
+@section('googleImg', asset('storage/images/mainImage/' . $singlePost->main_image))
+@section('twitterTitle', $singlePost->title)
+@section('twitterDesc', $singlePost->article)
+@section('twitterImg', asset('storage/images/mainImage/' . $singlePost->main_image))
+@section('ogTitle', $singlePost->title)
+@section('ogUrl', route('page', ['id'=>$singlePost->id]))
+@section('ogImage', asset('storage/images/mainImage/' . $singlePost->main_image))
+@section('ogDes', $singlePost->title)
 
 @section('content')
     <section class="category_article_block">

@@ -5,7 +5,7 @@
         <h4 class="category-page-title">{{$category->category_name}}</h4>
         @foreach($categoryPosts as $categoryPost)
             @if($categoryPost->status !== 0)
-            <a href="{{route('page', ['p'=>$categoryPost->id])}}">
+            <a href="{{route('page', ['id'=>$categoryPost->id])}}">
                 <div class="card my-5 border-0" style="max-width: 710px;">
                     <div class="row g-0">
                         <div class="col-md-4 col-sm-4 d-flex align-items-center card_image-block">

@@ -16,7 +16,7 @@
                 @foreach($posts as $post)
                         <tr>
                             <td scope="row">
-                                <a href="{{route('page', ['p'=>$post->id])}}" target="_blank" class="text-decoration-none">
+                                <a href="{{route('page', ['id'=>$post->id])}}" target="_blank" class="text-decoration-none">
                                 <div class="articlePanelImage">
                                     <img
                                         src="@if($post->main_image) {{asset('storage/images/mainImage/' . $post->main_image)}} @endif"

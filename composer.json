@@ -30,7 +30,9 @@
         },
         "files": [
             "app/Helpers/IconsHelper.php",
-            "app/Helpers/ContactsHelper.php"
+            "app/Helpers/ContactsHelper.php",
+            "app/Helpers/FeedHelper.php",
+            "app/Helpers/CategoriesHelper.php"
         ]
     },
     "autoload-dev": {

@@ -15,7 +15,9 @@
     <title>@yield('title', 'Լրահոս')</title>
 </head>
 <body>
-
+@php
+    $categories =getCategories()
+@endphp
 <header>
     @include('mainPage.layouts.header')
 </header>
@@ -27,7 +29,7 @@
                 <section class="py-5">
                     <h5 class="text-start news-category-title">Լրահոս</h5>
                 @foreach($posts as $post)
-                        <a href="{{route('page', ['p'=>$post->id])}}" class="text-dark">
+                        <a href="{{route('page', ['id'=>$post->id])}}" class="text-dark">
                     @include('mainPage.components.card', ['post'=>$post])
                         </a>
                 @endforeach

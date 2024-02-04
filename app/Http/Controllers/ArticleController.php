@@ -124,11 +124,6 @@ class ArticleController extends Controller
             $status->delete();
         }
 
-//        $tags = PostTags::where('post_id', $id)->first();
-//
-//        if ($tags) {
-//            $tags->delete();
-//        }
       return redirect()->back();
     }
 

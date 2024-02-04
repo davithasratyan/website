@@ -28,7 +28,7 @@
     </script>
     <link href="{{asset('assets/admin/css/adminStyle.css')}}" rel="stylesheet">
     <link href="{{asset('assets/admin/css/mediaStyles.css')}}" rel="stylesheet">
-    <title>Document</title>
+    <title>sPanel</title>
 </head>
 <body>
 <div id="wrapper">

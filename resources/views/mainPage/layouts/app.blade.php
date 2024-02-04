@@ -50,9 +50,6 @@
     <!-- meta tags END -->
 </head>
 <body>
-@php
-    $categories = getCategories()
-@endphp
 
 <header>
     @include('mainPage.layouts.header')

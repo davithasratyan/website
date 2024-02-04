@@ -1,5 +1,5 @@
 @php
-$contacts = getContact();
+    $categories = getCategories()
 @endphp
 
 <footer class="footer-section" id="#footer">

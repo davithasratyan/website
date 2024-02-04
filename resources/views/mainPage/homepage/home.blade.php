@@ -10,7 +10,7 @@
     <!-- Content -->
     <div class="row">
         <div class="col-md-12">
-            @foreach($categories as $category)
+            @foreach($mainPageCategories as $category)
                 @if($category->status == 1)
                     <section class="categories">
                         <div class="category-title-block">

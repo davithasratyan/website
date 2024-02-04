@@ -21,14 +21,14 @@ class HomePageController extends Controller
             ->orderBy('time_date', 'desc')
             ->get();
 
-        $categories = Category::with(['posts' => function ($query) use($currentDateTime) {
+        $mainPageCategories = Category::with(['posts' => function ($query) use($currentDateTime) {
                 $query->where('status', 0)->where('time_date', '<=', $currentDateTime);
             }, 'children'])
             ->get();
 
         return view('mainPage.homepage.home', [
             'sliderPosts' => $sliderPosts,
-            'categories' => $categories
+            'mainPageCategories' => $mainPageCategories
         ]);
     }
 }

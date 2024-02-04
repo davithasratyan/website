@@ -51,7 +51,7 @@
 </head>
 <body>
 @php
-    $categories =getCategories()
+    $categories = getCategories()
 @endphp
 
 <header>

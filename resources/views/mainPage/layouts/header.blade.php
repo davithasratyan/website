@@ -1,6 +1,3 @@
-@php
-    $categories = getCategories()
-@endphp
 <nav class="navbar navbar-expand-lg fixed-top border-0">
     <div class="container px-0">
         <a class="navbar-brand ms-2" href="{{route('mainPage')}}">

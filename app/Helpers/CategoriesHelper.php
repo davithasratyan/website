@@ -2,6 +2,7 @@
 
 use App\Models\Category;
 
-function getCategories(){
+function getCategories () {
+
     return Category::with('posts', 'children')->get();
 }

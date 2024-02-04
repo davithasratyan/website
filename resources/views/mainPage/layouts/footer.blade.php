@@ -1,7 +1,3 @@
-@php
-    $categories = getCategories()
-@endphp
-
 <footer class="footer-section" id="#footer">
     <div class="container">
         <div class="footer-content pt-5 pb-5">

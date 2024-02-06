@@ -6,10 +6,10 @@
 @endif
 @section('description', $singlePost->title)
 @section('googleName', $singlePost->title)
-@section('googleDes', $singlePost->article)
+@section('googleDes', Str::limit(strip_tags($singlePost->article), 100))
 @section('googleImg', asset('storage/images/mainImage/' . $singlePost->main_image))
 @section('twitterTitle', $singlePost->title)
-@section('twitterDesc', $singlePost->article)
+@section('twitterDesc', Str::limit(strip_tags($singlePost->article), 100))
 @section('twitterImg', asset('storage/images/mainImage/' . $singlePost->main_image))
 @section('ogTitle', $singlePost->title)
 @section('ogUrl', route('page', ['id'=>$singlePost->id]))

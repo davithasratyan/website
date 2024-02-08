@@ -377,15 +377,15 @@ section {
 .photo-card-body {
     background-color: black;
 }
-.photo-card-img-top {
-    width: 100px;
-    height: 100px;
-}
+/*.photo-card-img-top {*/
+/*    width: 100px;*/
+/*    height: 100px;*/
+/*}*/
 
 .photo-card-title {
     display: block;
     color: var(--white);
-    padding-bottom: 10px;
+    padding: 10px;
     border-bottom: 1px solid #1673de;
     margin-bottom: 15px;
 }

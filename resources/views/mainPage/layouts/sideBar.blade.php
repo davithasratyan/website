@@ -52,12 +52,14 @@
                 @endforeach
                 @endif
                 <hr>
-                <section class="d-flex flex-column justify-content-center align-items-center">
+                <section>
+                    <div class="card-columns">
                     @foreach($photos as $photo)
                         <a href="{{route('page', ['id'=>$photo->id])}}">
                             @include('mainPage.components.photoCard', ['photo'=>$photo])
                         </a>
                     @endforeach
+                    </div>
                 </section>
             </div>
         </div>

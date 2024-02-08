@@ -377,10 +377,10 @@ section {
 .photo-card-body {
     background-color: black;
 }
-/*.photo-card-img-top {*/
-/*    width: 100px;*/
-/*    height: 100px;*/
-/*}*/
+.photo-card-image {
+    object-fit: cover;
+    height: 220px;
+}
 
 .photo-card-title {
     display: block;

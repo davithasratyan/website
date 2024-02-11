@@ -367,6 +367,7 @@ section {
     color: #fff;
     font-size: 0.9rem;
     font-family: Mardoto-Bold;
+    display: flex;
 }
 /*․subTel_title {*/
 /*    display: block;*/

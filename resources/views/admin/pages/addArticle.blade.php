@@ -53,16 +53,16 @@
                         <div class="woodList">
                             <div id="fileInputContainer">
                                 <label for="fileInput">Ընտրել լուսանկար</label>
-                                <input type="file" class="form-control" id="fileInput" name="main_image">
+                                <input type="file" class="form-control my-2" id="fileInput" name="main_image">
                             </div>
                         </div>
                         <div class="woodList photoList">
                             <label for="multiUploadInput">Ներբեռնել ֆոտոշարք</label>
-                            <input type="file" class="form-control" id="multiUploadInput" name="multi_images[]" multiple>
+                            <input type="file" class="form-control my-2" id="multiUploadInput" name="multi_images[]" multiple>
                         </div>
                         <div class="woodList refreshDate">
                             <h6>Հրապարակման ամսաթիվ</h6>
-                            <input class="dateBox form-control" type="text" id="dateInput" name="date">
+                            <input class="dateBox" type="text" id="dateInput" name="date">
                             <i class="fa fa-refresh" id="refreshDate" aria-hidden="true"></i>
                         </div>
                         <div class="woodList">

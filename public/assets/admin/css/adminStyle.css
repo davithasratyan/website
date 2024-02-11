@@ -1,158 +1,231 @@
+/* =========== Google Fonts ============ */
+@import url("https://fonts.googleapis.com/css2?family=Ubuntu:wght@300;400;500;700&display=swap");
+
+/* =============== Globals ============== */
 * {
-    padding: 0;
+    font-family: "Ubuntu", sans-serif;
     margin: 0;
+    padding: 0;
     box-sizing: border-box;
+}
+ul {
+    padding: 0 !important;
+}
+
+:root {
+    /*--blue: #cdd2e0;*/
+    --white: #fff;
+    --gray: #f5f5f5;
+    --black1: #222;
+    --black2: #999;
 }
 
 body {
-    padding-bottom: 30px;
-    position: relative;
-    min-height: 100%;
-}
-
-a {
-    transition: background 0.2s, color 0.2s;
-}
-a:hover,
-a:focus {
-    text-decoration: none;
-}
-
-#wrapper {
-    padding-left: 0;
-    transition: all 0.5s ease;
-    position: relative;
-}
-
-#sidebar-wrapper {
-    z-index: 1000;
-    position: fixed;
-    left: 250px;
-    width: 0;
-    height: 100%;
-    margin-left: -250px;
-    overflow-y: auto;
+    min-height: 100vh;
     overflow-x: hidden;
-    background: #f8f8fa;
-    box-shadow: 0 0 50px 5px silver;
-    transition: all 0.5s ease;
 }
 
-#wrapper.toggled #sidebar-wrapper {
-    width: 250px;
+.wrapper {
+    position: relative;
+    width: 100%;
 }
 
-.sidebar-brand {
+/* =============== Navigation ================ */
+.navigation {
+    position: fixed;
+    width: 300px;
+    height: 100%;
+    background: var(--black1);
+    border-left: 10px solid var(--black1);
+    transition: 0.5s;
+    overflow: hidden;
+}
+.navigation.active {
+    width: 80px;
+}
+
+.navigation ul {
     position: absolute;
     top: 0;
-    width: 250px;
-    padding: 10px 0;
-    background: #f6f3f3;
-    display: flex;
-    justify-content: start;
-    align-items: center;
-    cursor: pointer;
+    left: 0;
+    width: 100%;
 }
 
-.sidebar-brand h2 {
+.navigation ul li {
+    position: relative;
+    width: 100%;
+    list-style: none;
+    border-top-left-radius: 30px;
+    border-bottom-left-radius: 30px;
+}
+
+.navigation ul li:hover,
+.navigation ul li.hovered {
+    background-color: var(--white);
+}
+
+.navigation ul li:nth-child(1) {
+    margin-bottom: 40px;
+    pointer-events: none;
+}
+
+.navigation ul li a {
+    position: relative;
     display: block;
-    color: #666;
-    font-size: 20px;
-    line-height: 20px;
-    height: 20px;
-    margin-top: 10px;
+    width: 100%;
+    display: flex;
+    text-decoration: none;
+    color: var(--white);
+}
+.navigation ul li:hover a,
+.navigation ul li.hovered a {
+    color: var(--black1);
+}
+
+.navigation ul li a .icon {
+    position: relative;
+    display: block;
+    min-width: 60px;
+    height: 60px;
+    line-height: 75px;
+    text-align: center;
+}
+.navigation ul li a .icon ion-icon {
+    font-size: 1.75rem;
+}
+
+.navigation ul li a .title {
+    position: relative;
+    display: block;
+    padding: 0 10px;
+    height: 60px;
+    line-height: 60px;
+    text-align: start;
+    white-space: nowrap;
+}
+
+/* --------- curve outside ---------- */
+.navigation ul li:hover a::before,
+.navigation ul li.hovered a::before {
+    content: "";
+    position: absolute;
+    right: 0;
+    top: -50px;
+    width: 50px;
+    height: 50px;
+    background-color: transparent;
+    border-radius: 50%;
+    box-shadow: 35px 35px 0 10px var(--white);
+    pointer-events: none;
+}
+.navigation ul li:hover a::after,
+.navigation ul li.hovered a::after {
+    content: "";
+    position: absolute;
+    right: 0;
+    bottom: -50px;
+    width: 50px;
+    height: 50px;
+    background-color: transparent;
+    border-radius: 50%;
+    box-shadow: 35px -35px 0 10px var(--white);
+    pointer-events: none;
+}
+
+/* ===================== Main ===================== */
+.main {
+    position: absolute;
+    width: calc(100% - 300px);
+    left: 300px;
+    min-height: 100vh;
+    background: var(--white);
+    transition: 0.5s;
+    overflow-x: auto;
+}
+.main.active {
+    width: calc(100% - 80px);
+    left: 80px;
+}
+
+.topbar {
+    width: 100%;
+    height: 60px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
     padding: 0 10px;
 }
 
-.sidebar-brand .fa-bars {
-    padding: 0 26px;
-}
-.sidebar-nav {
-    position: absolute;
-    top: 75px;
-    width: 250px;
-    margin: 0;
-    padding: 0;
-    list-style: none;
-}
-.sidebar-nav > li {
-    text-indent: 10px;
-    line-height: 42px;
-    padding: 10px 0;
-}
-.sidebar-nav > li a {
-    display: block;
-    text-decoration: none;
-    color: #95969A;
-    font-size: 18px;
-    font-family: Mardoto-Regular;
-}
-.sidebar-nav > li > a:hover,
-.sidebar-nav > li.active > a {
-    text-decoration: none;
-    color: #F8BE12;
-}
-.sidebar-nav > li > a i.fa {
-    font-size: 24px;
+.toggle {
+    position: relative;
     width: 60px;
+    height: 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 2.5rem;
+    cursor: pointer;
 }
 
-#navbar-wrapper {
-    width: 100%;
-    z-index: 2;
-}
-#wrapper.toggled #navbar-wrapper {
-    position: absolute;
-    margin-right: -250px;
-}
-#navbar-wrapper .navbar {
-    border-width: 0 0 0 0;
-    background-color: #eee;
-    font-size: 24px;
-    margin-bottom: 0;
-    border-radius: 0;
+.search {
+    position: relative;
+    width: 400px;
+    margin: 0 10px;
 }
 
-#navbar-wrapper .navbar a {
-    color: #757575;
-}
-
-#navbar-wrapper .navbar a:hover {
-    color: #F8BE12;
-}
-
-.navbar-header{
+.search label {
+    position: relative;
     width: 100%;
 }
 
-#navbar-wrapper .navbar .icons{
-    display:flex;
-    text-decoration:none;
-    float:right
-}
-
-#content-wrapper {
+.search label input {
     width: 100%;
-    position: absolute;
-    padding: 15px;
-    top: 100px;
-}
-#wrapper.toggled #content-wrapper {
-    position: absolute;
-    margin-right: -250px;
-}
-.selectpicker {
-    float: left;
-    color: #AAAAAC;
-    border: 1px solid #DBDADF;
+    height: 40px;
+    border-radius: 40px;
+    padding: 5px 20px;
+    padding-left: 35px;
+    font-size: 18px;
     outline: none;
-    padding-bottom: 5px;
-    padding-left: 5px;
-
+    border: 1px solid var(--black2);
 }
 
-.selectpicker option {
-    color: #AAAAAC;
+.searchAdmin {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+}
+
+.searchBtn {
+    position: absolute;
+    top: 0;
+    left: 0;
+    font-size: 1.2rem;
+}
+
+/* ================== Order Details List ============== */
+.details {
+    position: relative;
+    width: 100%;
+    padding: 0 20px;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-gap: 30px;
+}
+
+.details .wrapper {
+    position: relative;
+    display: grid;
+    min-height: 500px;
+    background: var(--white);
+    padding: 0 20px;
+    box-shadow: 0 7px 25px rgba(0, 0, 0, 0.08);
+    border-radius: 20px;
+}
+
+.details table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 10px;
 }
 
 
@@ -257,37 +330,6 @@ table th a span{
     margin: 25px 10px;
 }
 
-.search {
-    position: relative;
-    margin: 0.5rem 0.5rem !important;
-}
-
-.search input {
-    width: 200px;
-    padding: 0.3rem 0;
-    background: #fcfcfc;
-    border: none;
-    outline: none;
-    border-radius: 5px;
-    box-shadow: 0 0 3px #ccc, 0 10px 15px #ebebeb inset;
-    cursor: text;
-    text-indent: 32px;
-    font-size: 15px;
-}
-.search input:focus {
-    outline: none;
-    border: none;
-    border-radius: 5px;
-}
-
-.search .fa-search {
-    position: absolute;
-    font-size: 13px;
-    /*bottom: 15rem;*/
-    /*left: 0.3rem;*/
-    /*color: black;*/
-}
-
 /*ADMIN*/
 .woodList {
     padding: 16px;
@@ -296,9 +338,6 @@ table th a span{
     margin-bottom: 10px;
 }
 
-/*input[type="file"] {*/
-/*    display: none;*/
-/*}*/
 
 /* Style the custom button */
 .custom-upload-button {
@@ -365,18 +404,6 @@ table th a span{
     border-radius: 7px;
     margin: 10px 0;
 }
-.woodList {
-    margin: 10px 0;
-    min-height: 60px;
-}
-
-.woodList > h6 {
-    font-size: 10px;
-    font-family: Mardoto-Light;
-    height: 25px;
-    line-height: 25px;
-    margin-bottom: 10px
-}
 .photoList {
     display: flex;
     flex-wrap: wrap;
@@ -404,31 +431,6 @@ table th a span{
     line-height: 20px;
 }
 
-.search {
-    position: relative;
-    margin: 0.5rem 0.5rem !important;
-}
-.search input {
-    width: 250px;
-    padding: 0.3rem 0;
-    background: #fcfcfc;
-    border: none;
-    outline: none;
-    border-radius: 5px;
-    box-shadow: 0 0 3px #ccc, 0 10px 15px #ebebeb inset;
-    cursor: text;
-    text-indent: 32px;
-    font-size: 15px;
-}
-.search input:focus {
-    outline: none;
-    border: none;
-    border-radius: 5px;
-}
-
-.search .fa-search {
-    position: absolute;
-    top: 0.6rem;
-    left: 0.3rem;
-    color: black;
+.modal-title {
+    color: #1a202c;
 }

@@ -24,21 +24,31 @@
         toolbar: 'undo redo | blocks fontfamily fontsize | bold italic underline strikethrough | link image media table | align lineheight | numlist bullist indent outdent | emoticons charmap | removeformat',
     });
 </script>
-<div id="wrapper">
-    <aside id="sidebar-wrapper">
-        @include('admin.layouts.sideBar')
-    </aside>
 
-    <div id="navbar-wrapper">
+<div class="wrapper">
+    <!-- =============== Navigation ================ -->
+    @include('admin.layouts.sideBar')
+
+    <!-- ========================= Main ==================== -->
+    <div class="main">
         @include('admin.layouts.header')
-    </div>
 
-    <main class="px-5">
-        @yield('admin-content')
-    </main>
+
+        <!-- ================ Order Details List ================= -->
+        <div class="details">
+            <div class="recentOrders">
+                @yield('admin-content')
+            </div>
+        </div>
+    </div>
 </div>
+
+<!-- =========== Scripts =========  -->
 <script src="{{asset('assets/vendor/bootstrap/js/bootstrap.bundle.js')}}"></script>
 <script src="{{asset('assets/admin/js/adminScript.js')}}"></script>
 <script src="{{asset('assets/admin/js/refreshDate.js')}}"></script>
+<!-- ====== ionicons ======= -->
+<script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+<script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
 </body>
 </html>

@@ -1,127 +1,53 @@
-@media (min-width: 992px) {
-    #wrapper {
-        padding-left: 250px;
+/* ====================== Responsive Design ========================== */
+@media (max-width: 991px) {
+    .navigation {
+        left: -300px;
     }
-
-    #wrapper.toggled {
-        padding-left: 60px;
+    .navigation.active {
+        width: 300px;
+        left: 0;
     }
-
-    #sidebar-wrapper {
-        width: 250px;
+    .main {
+        width: 100%;
+        left: 0;
     }
-
-    #wrapper.toggled #sidebar-wrapper {
-        width: 60px;
+    .main.active {
+        left: 300px;
     }
-
-    #wrapper.toggled #navbar-wrapper {
-        position: absolute;
-        margin-right: -190px;
-    }
-
-    #wrapper.toggled #content-wrapper {
-        position: absolute;
-        margin-right: -190px;
-    }
-
-    #navbar-wrapper {
-        position: relative;
-    }
-
-    #wrapper.toggled {
-        padding-left: 60px;
-    }
-
-    #content-wrapper {
-        position: relative;
-        top: 0;
-    }
-
-    #wrapper.toggled #navbar-wrapper,
-    #wrapper.toggled #content-wrapper {
-        position: relative;
-        margin-right: 60px;
+    .cardBox {
+        grid-template-columns: repeat(2, 1fr);
     }
 }
 
-@media (min-width: 768px) and (max-width: 991px) {
-    #wrapper {
-        padding-left: 60px;
+@media (max-width: 768px) {
+    .details {
+        grid-template-columns: 1fr;
     }
-
-    #sidebar-wrapper {
-        width: 61px;
-    }
-
-    #wrapper.toggled #navbar-wrapper {
-        position: absolute;
-        margin-right: -250px;
-    }
-
-    #wrapper.toggled #content-wrapper {
-        position: absolute;
-        margin-right: -250px;
-    }
-
-    #navbar-wrapper {
-        position: relative;
-    }
-
-    #wrapper.toggled {
-        padding-left: 250px;
-    }
-
-    #content-wrapper {
-        position: relative;
-        top: 0;
-    }
-
-    #wrapper.toggled #navbar-wrapper,
-    #wrapper.toggled #content-wrapper {
-        position: relative;
-        margin-right: 250px;
+    /*.wrapper {*/
+    /*    overflow-x: auto;*/
+    /*}*/
+    .status.inProgress {
+        white-space: nowrap;
     }
 }
 
-@media (max-width: 767px) {
-    #wrapper {
-        padding-left: 0;
+@media (max-width: 480px) {
+    .navigation {
+        width: 100%;
+        left: -100%;
+        z-index: 1000;
     }
-
-    #sidebar-wrapper {
-        width: 60px;
+    .navigation.active {
+        width: 100%;
+        left: 0;
     }
-
-    #wrapper.toggled #sidebar-wrapper {
-        width: 250px;
+    .toggle {
+        z-index: 10001;
     }
-    #wrapper.toggled #navbar-wrapper {
-        position: absolute;
-        margin-right: -250px;
-    }
-
-    #wrapper.toggled #content-wrapper {
-        position: absolute;
-        margin-right: -250px;
-    }
-
-    #navbar-wrapper {
-        position: relative;
-    }
-
-    #wrapper.toggled {
-        padding-left: 250px;
-    }
-
-    #content-wrapper {
-        position: relative;
-        top: 0;
-    }
-
-    #wrapper.toggled #navbar-wrapper,
-    #wrapper.toggled #content-wrapper {
-        position: relative;
-        margin-right: 250px;
+    .main.active .toggle {
+        color: #fff;
+        position: fixed;
+        right: 0;
+        left: initial;
     }
 }

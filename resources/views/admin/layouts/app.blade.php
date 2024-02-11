@@ -33,7 +33,6 @@
     <div class="main">
         @include('admin.layouts.header')
 
-
         <!-- ================ Order Details List ================= -->
         <div class="details">
             <div class="recentOrders">

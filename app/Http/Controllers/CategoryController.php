@@ -30,8 +30,10 @@ class CategoryController extends Controller
     }
 
     public function delete(Request $request){
-        Category::find($request->category)->delete();
-        PostCategory::where('category_id', $request->category)->delete();
+        Category::findOrFail($request->categoryId)->delete();
+        if (PostCategory::where('category_id', $request->category)) {
+            PostCategory::where('category_id', $request->category)->delete();
+        }
         return redirect()->back();
     }
 }

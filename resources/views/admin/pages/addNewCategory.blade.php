@@ -27,8 +27,8 @@
         </div>
         <div class="col-md-12">
             <form action="{{route('deleteCategory')}}" method="get">
-                <select name="category" class="form-select my-5">
-                    <option value="0">Ընտրել կատեգորիա</option>
+                <select name="categoryId" class="form-select my-5">
+                    <option>Ընտրել կատեգորիա</option>
                     @foreach($categories as $category)
                         <option value="{{$category->id}}">{{$category->category_name}}</option>
                     @endforeach

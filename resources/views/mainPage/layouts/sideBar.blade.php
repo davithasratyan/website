@@ -14,9 +14,9 @@
     </div>
     <div class="col-md-12">
         <div class="subTel">
-            <h6 class="subTel_title"> Հետևեք մեզ Տելեգրամում՝ </h6>
+            <h6 class="subTel_title m-0"> Հետևեք մեզ Տելեգրամում՝ </h6>
             @foreach($telegramIcon as $tel)
-                <a class="px-2 mt-2" href="{{$tel->link}}" target="_blank">@include('mainPage.icons.telegram')</a>
+                <a class="px-2" href="{{$tel->link}}" target="_blank">@include('mainPage.icons.telegram')</a>
             @endforeach
         </div>
     </div>

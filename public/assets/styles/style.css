@@ -368,12 +368,13 @@ section {
     font-size: 0.9rem;
     font-family: Mardoto-Bold;
     display: flex;
+    align-items: center;
 }
-/*․subTel_title {*/
-/*    display: block;*/
-/*    font-size: 13px;*/
-/*    font-family: Mardoto-Bold;*/
-/*}*/
+․subTel_title {
+    display: block;
+    font-size: 13px;
+    font-family: Mardoto-Bold;
+}
 /*PHOTO CARD BODY*/
 .photo-card-body {
     background-color: black;

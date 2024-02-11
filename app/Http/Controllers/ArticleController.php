@@ -106,7 +106,8 @@ class ArticleController extends Controller
     }
 
     public function delete ($id) {
-        $post = Post::find($id);
+        $post = Post::findOrFail($id);
+
         $post->delete();
 
         $category = PostCategory::where('post_id', $id)->first();

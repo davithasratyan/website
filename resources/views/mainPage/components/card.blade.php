@@ -18,12 +18,11 @@
                         @endphp
                     </small>
                 </p>
-                <div class="card-text card-article">{!!Str::limit($post->article, 100, '...')!!}</div>
+                <div class="card-text card-article">{!!Str::limit(strip_tags($post->article), 100, '...')!!}</div>
             </div>
         </div>
     </div>
 </div>
-
 </a>
 
 

@@ -53,7 +53,7 @@
                         <div class="woodList">
                             <div id="fileInputContainer">
                                 <label for="fileInput">Ընտրել լուսանկար</label>
-                                <input type="file" class="form-control" id="fileInput" name="main_image">
+                                <input type="file" class="form-control my-2" id="fileInput" name="main_image">
                                 @if($post->main_image)
                                     <div class="">
                                         <img class="img-thumbnail"
@@ -65,7 +65,7 @@
                         </div>
                         <div class="woodList">
                             <label for="multiUploadInput">Ներբեռնել ֆոտոշարք</label>
-                            <input type="file" class="form-control" id="multiUploadInput" name="multi_images[]" multiple>
+                            <input type="file" class="form-control my-2" id="multiUploadInput" name="multi_images[]" multiple>
                             @if($post->articleImages->isNotEmpty())
                                 <div class="photoList">
                                 @foreach($post->articleImages as $image)
@@ -80,8 +80,10 @@
                         </div>
                         <div class="woodList refreshDate">
                             <h6>Հրապարակման ամսաթիվ</h6>
+                            <div class="d-flex align-items-center justify-content-between">
                             <input class="dateBox form-control" type="text" id="currentTime" name="date" value="{{$post->time_date}}">
                             <i class="fa fa-refresh" id="refreshDateBtn" aria-hidden="true"></i>
+                            </div>
                         </div>
                         <div class="woodList">
                             <h6>Հրապարակման կարգավիճակ</h6>
@@ -99,6 +101,7 @@
         </div>
         </form>
         @endforeach
+    <!-- JavaScript -->
     <script>
         const currentTimeInput = document.getElementById('currentTime');
         const refreshDateBtn = document.getElementById('refreshDateBtn');
@@ -121,10 +124,7 @@
 
             dateInput.value = new Date().toLocaleString('en-US', options);
         }
-    </script>
-    <!-- Your HTML or Blade template -->
-    <!-- Your JavaScript -->
-    <script>
+
         function deleteImage(imageId) {
             $.ajax({
                 type: 'DELETE',

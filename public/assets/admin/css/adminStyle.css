@@ -367,16 +367,9 @@ table th a span{
     border: 1px solid skyblue;
     padding: 10px;
     border-radius: 7px;
-    margin-bottom: 10px;
-}
-.refreshDate {
-    position: relative;
 }
 
 .fa-refresh {
-    position: absolute;
-    top: 55%;
-    right: 50px;
     cursor: pointer;
 }
 

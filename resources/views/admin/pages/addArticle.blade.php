@@ -62,8 +62,10 @@
                         </div>
                         <div class="woodList refreshDate">
                             <h6>Հրապարակման ամսաթիվ</h6>
+                            <div class="d-flex align-items-center justify-content-between">
                             <input class="dateBox" type="text" id="dateInput" name="date">
-                            <i class="fa fa-refresh" id="refreshDate" aria-hidden="true"></i>
+                             <i class="fa fa-refresh" id="refreshDate" aria-hidden="true"></i>
+                            </div>
                         </div>
                         <div class="woodList">
                             <h6>Հրապարակման կարգավիճակ</h6>

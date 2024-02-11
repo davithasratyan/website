@@ -18,9 +18,11 @@
                                 <h5 class="category-title">{{$category->category_name}}</h5></a>
                         </div>
                     @foreach($category->posts()->latest()->take(2)->get() as $post)
-                        @if($post->status !== 0)
-                            @include('mainPage.components.card', ['post' => $post])
-                        @endif
+                            @if($post->status !== 0)
+                                <a href="{{route('page', ['id'=>$post->id])}}">
+                                    @include('mainPage.components.card', ['post' => $post])
+                                </a>
+                            @endif
                     @endforeach
                     </section>
                 @endif

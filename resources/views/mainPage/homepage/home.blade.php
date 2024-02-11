@@ -10,23 +10,22 @@
     <!-- Content -->
     <div class="row">
         <div class="col-md-12">
-            @foreach($mainPageCategories as $category)
-                @if($category->status == 1)
-                    <section class="categories">
+            <section class="categories">
+                @foreach($mainPageCategories as $category)
+                    @if($category->status == 1)
                         <div class="category-title-block">
                             <a href="{{ route('postsByCategory', ['id'=>$category->id, 'category' => $category->category]) }}">
                                 <h5 class="category-title">{{$category->category_name}}</h5></a>
                         </div>
+
                         @foreach($category->posts()->latest()->take(2)->get() as $post)
                             @if($post->status !== 0)
-                                <a href="{{route('page', ['id'=>$post->id])}}">
                                     @include('mainPage.components.card', ['post' => $post])
-                                </a>
                             @endif
                         @endforeach
-                    </section>
-                @endif
-            @endforeach
+                    @endif
+                @endforeach
+            </section>
         </div>
     </div>
     <!-- End Content -->

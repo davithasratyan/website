@@ -1,3 +1,4 @@
+<a href="{{route('page', ['id'=>$post->id])}}">
 <div class="card my-5 border-0" style="max-width: 710px;">
     <div class="row g-0">
         <div class="col-md-4 col-sm-4 d-flex align-items-center card_image-block">
@@ -23,6 +24,6 @@
     </div>
 </div>
 
-
+</a>
 
 

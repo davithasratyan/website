@@ -26,8 +26,8 @@
             </a>
             @endif
         @endforeach
-            <div class="d-flex justify-content-center">
-                {!! $categoryPosts->links() !!}
-            </div>
+{{--            <div class="d-flex justify-content-center">--}}
+{{--                {!! $categoryPosts->links() !!}--}}
+{{--            </div>--}}
     </section>
 @endsection

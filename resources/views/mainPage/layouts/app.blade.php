@@ -74,7 +74,7 @@
         </div>
     </div>
 </main>
-<footer>
+<footer class="footer-section" id="#footer">
     @include('mainPage.layouts.footer')
 </footer>
 

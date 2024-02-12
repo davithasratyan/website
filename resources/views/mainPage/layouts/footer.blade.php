@@ -1,8 +1,16 @@
 @php
 $contacts = getContact();
 @endphp
-
-<footer class="footer-section" id="#footer">
+    <!-- Yandex.RTB R-A-5980996-3 -->
+    <script>
+        window.yaContextCb.push(()=>{
+            Ya.Context.AdvManager.render({
+                "blockId": "R-A-5980996-3",
+                "type": "floorAd",
+                "platform": "desktop"
+            })
+        })
+    </script>
     <div class="container">
         <div class="footer-content pt-5 pb-5">
             <div class="row">
@@ -84,4 +92,3 @@ $contacts = getContact();
             </div>
         </div>
     </div>
-</footer>

@@ -21,6 +21,18 @@
         </div>
     </div>
     <div class="col-md-12">
+        <!-- Yandex.RTB R-A-5980996-1 -->
+        <script>
+            window.yaContextCb.push(()=>{
+                Ya.Context.AdvManager.render({
+                    "blockId": "R-A-5980996-1",
+                    "type": "fullscreen",
+                    "platform": "touch"
+                })
+            })
+        </script>
+    </div>
+    <div class="col-md-12">
         <div class="row">
             <div class="col-md-12">
                 <a href="{{route('feed')}}" class="text-start news-category-title">Լրահոս</a>

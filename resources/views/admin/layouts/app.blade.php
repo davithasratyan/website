@@ -14,6 +14,9 @@
     <link rel="icon" href="{{asset('assets/icons/x-icon.png')}}" type="image/x-icon">
     <link href="{{asset('assets/admin/css/adminStyle.css')}}" rel="stylesheet">
     <link href="{{asset('assets/admin/css/mediaStyles.css')}}" rel="stylesheet">
+    <!-- Yandex.RTB -->
+    <script>window.yaContextCb=window.yaContextCb||[]</script>
+    <script src="https://yandex.ru/ads/system/context.js" async></script>
     <title>sPanel</title>
 </head>
 <body>

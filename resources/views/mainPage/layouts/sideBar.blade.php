@@ -32,7 +32,7 @@
                                 <a href="{{route('page', ['id'=>$post->id])}}" class="news-card">
                                     <img src="{{ asset('storage/images/mainImage/' . $post->main_image) }}">
                                     <span
-                                        class="@if($post->articleStatus->boldCheck == 1) fw-bolder @endif">{{ Str::limit($post->title, 75, '...') }}</span>
+                                        class="@if($post->articleStatus->boldCheck == 1) fw-bolder @endif">{{ Str::limit($post->title, 100, '...') }}</span>
                                     <time class="timeago" datetime="{{ $post->time_date }}">
                                         {{ $post->time_date->locale('hy')->diffForHumans() }}
                                     </time>

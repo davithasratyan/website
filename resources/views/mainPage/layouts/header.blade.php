@@ -48,3 +48,14 @@
         </div>
     </div>
 </nav>
+
+<!-- Yandex.RTB R-A-5980996-2 -->
+<script>
+    window.yaContextCb.push(()=>{
+        Ya.Context.AdvManager.render({
+            "blockId": "R-A-5980996-2",
+            "type": "fullscreen",
+            "platform": "desktop"
+        })
+    })
+</script>

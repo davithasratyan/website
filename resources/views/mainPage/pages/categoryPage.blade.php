@@ -18,7 +18,7 @@
                                 <p class="card-text card-date"><small
                                         class="text-muted">{{ \Carbon\Carbon::parse($categoryPost->time_date)->isoFormat('DD MMMM Y', 'months') }}</small>
                                 </p>
-                                <div class="card-text text-dark card-article">{!!Str::limit($categoryPost->article, 80, '...')!!}</div>
+                                <div class="card-text text-dark card-article">{!!Str::limit(strip_tags($categoryPost->article), 80, '...')!!}</div>
                             </div>
                         </div>
                     </div>
@@ -26,8 +26,8 @@
             </a>
             @endif
         @endforeach
-{{--            <div class="d-flex justify-content-center">--}}
-{{--                {!! $categoryPosts->links() !!}--}}
-{{--            </div>--}}
+            <div class="d-flex justify-content-center">
+                {!! $categoryPosts->links() !!}
+            </div>
     </section>
 @endsection

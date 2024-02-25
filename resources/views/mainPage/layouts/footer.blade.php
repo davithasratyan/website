@@ -49,7 +49,7 @@ $contacts = getContact();
                             @endphp
 
                             @foreach($icons as $icon)
-                                <a href="{{$icon->link}}" target="_blank"><i class="fa fa-{{$icon->icon}}" style="background: {{$icon->color}}"></i></a>
+                                <a href="{{$icon->link}}" target="_blank"><i class="fa fa-{{$icon->icon}} my-1" style="background: {{$icon->color}}"></i></a>
                             @endforeach
                         </div>
                     </div>
@@ -58,7 +58,7 @@ $contacts = getContact();
                     <div class="footer-widget">
                         <div class="footer-social-icon">
                             <div class="footer-widget-heading">
-                                <h3>Հեստադարձ կապ</h3>
+                                <h3>Հետադարձ կապ</h3>
                             </div>
                             <ul class="d-flex flex-column">
                                 @foreach($contacts as $contact)

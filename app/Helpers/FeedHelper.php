@@ -50,6 +50,7 @@ function getPhotos()
 
 function getFavorites()
 {
+    $currentDateTime = Carbon::now();
     return Cache::remember('favorite_posts', Carbon::now()->addMinutes(1), function () use ($currentDateTime) {
         return Post::with('articleStatus')
             ->whereHas('articleStatus', function ($query) {

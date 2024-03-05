@@ -50,16 +50,18 @@ function getPhotos()
 
 function getFavorites()
 {
-    return Cache::remember('favorite_posts', Carbon::now()->addMinutes(1), function () {
+    return Cache::remember('favorite_posts', Carbon::now()->addMinutes(1), function () use ($currentDateTime) {
         return Post::with('articleStatus')
             ->whereHas('articleStatus', function ($query) {
                 $query->where('favCheck', 1);
             })
             ->where('status', '!=', 0)
-            ->where('time_date', '<=', Carbon::now())
+            ->where('time_date', '<=', $currentDateTime)
+            ->orderBy('time_date', 'desc') // Order by date descending
             ->limit(3)
             ->get();
     });
+
 
 }
 

@@ -60,7 +60,7 @@ class HomePageController extends Controller
                 ->get();
 
             // Store the data in the cache
-            Cache::put('mainPageData', [$sliderPosts, $mainPageCategories], now()->addHours(1));
+            Cache::put('mainPageData', [$sliderPosts, $mainPageCategories], now()->addMinutes(1));
 
             // Assign the data to a variable
             $data = [$sliderPosts, $mainPageCategories];

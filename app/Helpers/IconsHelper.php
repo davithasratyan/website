@@ -1,12 +1,18 @@
 <?php
 
 use App\Models\Contacts;
-function getAllIcons ()
+use Illuminate\Support\Facades\Cache;
+
+function getAllIcons()
 {
-    return Contacts::all();
+    return Cache::remember('all_icons', now()->addMinutes(3), function () {
+        return Contacts::all();
+    });
 }
 
 function getTelegram()
 {
-    return Contacts::where('icon', 'telegram')->get();
+    return Cache::remember('telegram_contacts', now()->addMinutes(3), function () {
+        return Contacts::where('icon', 'telegram')->get();
+    });
 }

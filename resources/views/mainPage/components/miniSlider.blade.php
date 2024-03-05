@@ -6,7 +6,7 @@
     </div>
     <div class="carousel-inner">
         @foreach($favorites as $key => $favorite)
-        <div class="carousel-item mini-slider-item {{ $key === 0 ? 'active' : '' }}">
+        <div class="carousel-item mini-slider-item {{ $key === 2 ? 'active' : '' }}">
             <a href="{{route('page', ['id'=>$favorite->id])}}">
             <img src="{{asset('storage/images/mainImage/' . $favorite->main_image)}}" class="d-block w-100" alt="{{$favorite->title}}">
             <div class="carousel-caption mini-slider-caption d-none d-md-block">
@@ -25,3 +25,4 @@
         <span class="visually-hidden">Next</span>
     </button>
 </div>
+

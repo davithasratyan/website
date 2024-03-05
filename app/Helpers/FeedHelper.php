@@ -1,5 +1,6 @@
 <?php
 
+
 use App\Models\Post;
 use Illuminate\Support\Carbon;
 use Illuminate\Support\Facades\Cache;
@@ -50,7 +51,6 @@ function getPhotos()
 function getFavorites()
 {
     return Cache::remember('favorite_posts', Carbon::now()->addMinutes(1), function () {
-
         return Post::with('articleStatus')
             ->whereHas('articleStatus', function ($query) {
                 $query->where('favCheck', 1);
@@ -60,4 +60,6 @@ function getFavorites()
             ->limit(3)
             ->get();
     });
+
 }
+

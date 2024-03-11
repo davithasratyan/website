@@ -8,6 +8,8 @@
     <!-- Yandex.RTB -->
     <script>window.yaContextCb=window.yaContextCb||[]</script>
     <script src="https://yandex.ru/ads/system/context.js" async></script>
+    <script>window.yaContextCb=window.yaContextCb||[]</script>
+    <script src="https://yandex.ru/ads/system/context.js" async></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
     <script src="https://kit.fontawesome.com/8852491f3e.js" crossorigin="anonymous"></script>
     <link href="{{asset('assets/vendor/bootstrap/css/bootstrap.css')}}" rel="stylesheet">
@@ -53,6 +55,16 @@
     <!-- meta tags END -->
 </head>
 <body>
+<!-- Yandex.RTB R-A-5980996-5 -->
+<script>
+    window.yaContextCb.push(()=>{
+        Ya.Context.AdvManager.render({
+            "blockId": "R-A-5980996-5",
+            "type": "rewarded",
+            "platform": "touch"
+        })
+    })
+</script>
 @php
     $categories = getCategories ();
 @endphp

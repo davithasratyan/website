@@ -69,10 +69,30 @@
     $categories = getCategories ();
 @endphp
 <header>
+    <!-- Yandex.RTB R-A-5980996-7 -->
+    <script>
+        window.yaContextCb.push(()=>{
+            Ya.Context.AdvManager.render({
+                "blockId": "R-A-5980996-7",
+                "type": "topAd"
+            })
+        })
+    </script>
     @include('mainPage.layouts.header')
 </header>
 
 <main>
+    <!-- Yandex.RTB R-A-5980996-6 -->
+    <div id="yandex_rtb_R-A-5980996-6"></div>
+    <script>
+        window.yaContextCb.push(()=>{
+            Ya.Context.AdvManager.render({
+                "blockId": "R-A-5980996-6",
+                "renderTo": "yandex_rtb_R-A-5980996-6",
+                "type": "feed"
+            })
+        })
+    </script>
     <div class="container">
         <div class="row justify-content-between">
             <div class="col-md-7">

@@ -73,6 +73,19 @@
                     @endforeach
                     </div>
                 </section>
+                <section>
+                    <!-- Yandex.RTB R-A-5980996-6 -->
+                    <div id="yandex_rtb_R-A-5980996-6"></div>
+                    <script>
+                        window.yaContextCb.push(()=>{
+                            Ya.Context.AdvManager.render({
+                                "blockId": "R-A-5980996-6",
+                                "renderTo": "yandex_rtb_R-A-5980996-6",
+                                "type": "feed"
+                            })
+                        })
+                    </script>
+                </section>
             </div>
         </div>
     </div>

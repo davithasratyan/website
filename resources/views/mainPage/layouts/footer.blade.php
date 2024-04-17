@@ -92,3 +92,12 @@ $contacts = getContact();
             </div>
         </div>
     </div>
+<!-- Yandex.RTB R-A-5980996-7 -->
+<script>
+    window.yaContextCb.push(()=>{
+        Ya.Context.AdvManager.render({
+            "blockId": "R-A-5980996-7",
+            "type": "topAd"
+        })
+    })
+</script>

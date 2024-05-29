@@ -75,27 +75,25 @@
 <main>
     <div class="container">
         <div class="row justify-content-between">
+            <div class="col-md-2">
+                <section>
+                    <!-- Yandex.RTB R-A-5980996-6 -->
+                    <div id="yandex_rtb_R-A-5980996-6"></div>
+                    <script>
+                        window.yaContextCb.push(()=>{
+                            Ya.Context.AdvManager.render({
+                                "blockId": "R-A-5980996-6",
+                                "renderTo": "yandex_rtb_R-A-5980996-6",
+                                "type": "feed"
+                            })
+                        })
+                    </script>
+                </section>
+            </div>
             <div class="col-md-7">
                 @yield('content')
-                <div class="row">
-                    <div class="col-md-12">
-                        <section>
-                            <!-- Yandex.RTB R-A-5980996-6 -->
-                            <div id="yandex_rtb_R-A-5980996-6"></div>
-                            <script>
-                                window.yaContextCb.push(()=>{
-                                    Ya.Context.AdvManager.render({
-                                        "blockId": "R-A-5980996-6",
-                                        "renderTo": "yandex_rtb_R-A-5980996-6",
-                                        "type": "feed"
-                                    })
-                                })
-                            </script>
-                        </section>
-                    </div>
-                </div>
             </div>
-            <div class="col-md-4">
+            <div class="col-md-3">
                 <aside>
                     @include('mainPage.layouts.sideBar')
                 </aside>

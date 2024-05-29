@@ -56,6 +56,7 @@ class PageController extends Controller
                 ->orWhere('article', 'like', '%' . $searchTerm . '%');
         })
             ->where('status', '!=', 0)
+            ->orderBy('time_date', 'desc')
             ->get();
 
         $page = request()->input('paged', 1);

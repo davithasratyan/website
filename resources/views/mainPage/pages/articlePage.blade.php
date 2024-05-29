@@ -47,7 +47,6 @@
         </div>
 
         <div class="article">
-            {!! $singlePost->article !!}
             <!-- Yandex.RTB R-A-5980996-9 -->
             <div id="yandex_rtb_R-A-5980996-9"></div>
             <script>
@@ -58,6 +57,7 @@
                     })
                 })
             </script>
+            {!! $singlePost->article !!}
         </div>
     </section>
     <section>

@@ -74,6 +74,18 @@
                     </div>
                 </section>
             </div>
+            <div class="col-md-12">
+                <!-- Yandex.RTB R-A-5980996-11 -->
+                <div id="yandex_rtb_R-A-5980996-11"></div>
+                <script>
+                    window.yaContextCb.push(()=>{
+                        Ya.Context.AdvManager.render({
+                            "blockId": "R-A-5980996-11",
+                            "renderTo": "yandex_rtb_R-A-5980996-11"
+                        })
+                    })
+                </script>
+            </div>
         </div>
     </div>
 </div>

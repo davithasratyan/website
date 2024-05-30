@@ -75,6 +75,16 @@
     <div>
         <div class="sharethis-inline-share-buttons"></div>
     </div>
+    <!-- Yandex.RTB R-A-5980996-10 -->
+    <div id="yandex_rtb_R-A-5980996-10"></div>
+    <script>
+        window.yaContextCb.push(()=>{
+            Ya.Context.AdvManager.render({
+                "blockId": "R-A-5980996-10",
+                "renderTo": "yandex_rtb_R-A-5980996-10"
+            })
+        })
+    </script>
     <section class="relatedArticles_block">
         @if(!empty($relatedPosts))
             <h5 class="relatedArticles_block_title">Այս թեմայով</h5>

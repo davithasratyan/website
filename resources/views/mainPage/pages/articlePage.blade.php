@@ -72,7 +72,7 @@
             </div>
         @endif
     </section>
-    <div>
+    <div class="my-2">
         <div class="sharethis-inline-share-buttons"></div>
     </div>
     <!-- Yandex.RTB R-A-5980996-10 -->

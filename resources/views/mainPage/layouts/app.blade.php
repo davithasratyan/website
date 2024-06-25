@@ -73,8 +73,8 @@
 </header>
 
 <main>
-    <div class="container–fluid px-0">
-        <div class="row justify-content-between px-0">
+    <div class="container–fluid">
+        <div class="row justify-content-between">
             <div class="col-md-3">
                 <section class="mt-2">
                     <!-- Yandex.RTB R-A-5980996-6 -->
@@ -90,7 +90,7 @@
                     </script>
                 </section>
             </div>
-            <div class="col-md-6">
+            <div class="col-md-5">
                 @yield('content')
             </div>
             <div class="col-md-3">

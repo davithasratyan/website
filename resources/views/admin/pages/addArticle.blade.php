@@ -6,16 +6,10 @@
         <div class="row">
             <div class="col-md-9">
                 <input type="text" class="form-control formBorders" placeholder="Վերնագիր" name="title">
-                <textarea id="summernote" rows="26" class="form-control" name="article"></textarea>
+                <textarea id="summernote" rows="150" class="form-control" name="article"></textarea>
                 <script>
                     $(document).ready(function() {
                         $('#summernote').summernote();
-                        $('#summernote').summernote({
-                            height: 300,                 // set editor height
-                            minHeight: null,             // set minimum height of editor
-                            maxHeight: null,             // set maximum height of editor
-                            focus: true                  // set focus to editable area after initializing summernote
-                        });
                     });
                 </script>
                 <input type="text" class="form-control formBorders" placeholder="youtube.com կայքի հղումը" name="yt_link">

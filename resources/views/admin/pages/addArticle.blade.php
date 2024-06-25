@@ -6,7 +6,7 @@
         <div class="row">
             <div class="col-md-9">
                 <input type="text" class="form-control formBorders" placeholder="Վերնագիր" name="title">
-                <textarea id="mytextarea" rows="26" class="form-control" name="article"></textarea>
+                <textarea id="summernote" rows="26" class="form-control" name="article"></textarea>
                 <input type="text" class="form-control formBorders" placeholder="youtube.com կայքի հղումը" name="yt_link">
                 <input type="text" class="form-control formBorders" placeholder="Հանգուցային բառեր" name="tags">
             </div>

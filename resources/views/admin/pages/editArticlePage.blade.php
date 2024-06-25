@@ -6,7 +6,18 @@
         <div class="row">
             <div class="col-md-9">
                 <input type="text" class="form-control formBorders" placeholder="Վերնագիր" name="title" @if($post->title) value="{{$post->title}}" @endif>
-                <textarea id="mytextarea" rows="26" class="form-control" name="article">@if($post->article){{$post->article}} @endif</textarea>
+                <textarea id="summernote" rows="26" class="form-control" name="article">@if($post->article){{$post->article}} @endif</textarea>
+                <script>
+                    $(document).ready(function() {
+                        $('#summernote').summernote();
+                        $('#summernote').summernote({
+                            height: 300,                 // set editor height
+                            minHeight: null,             // set minimum height of editor
+                            maxHeight: null,             // set maximum height of editor
+                            focus: true                  // set focus to editable area after initializing summernote
+                        });
+                    });
+                </script>
                 <input type="text" class="form-control formBorders" placeholder="youtube.com կայքի հղումը" name="yt_link" @if($post->yt_link) value="https://www.youtube.com/watch?v={{$post->yt_link}}" @endif>
                 <input type="text" class="form-control formBorders" placeholder="Հանգուցային բառեր" name="tags" value="{{ implode(', ', $tagNames->toArray()) }}">
             </div>

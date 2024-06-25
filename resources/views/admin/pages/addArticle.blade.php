@@ -9,7 +9,12 @@
                 <textarea id="summernote" rows="150" class="form-control" name="article"></textarea>
                 <script>
                     $(document).ready(function() {
-                        $('#summernote').summernote();
+                        $('#summernote').summernote({
+                            height: 600,
+                            minHeight: null,
+                            maxHeight: null,
+                            focus: true
+                        });
                     });
                 </script>
                 <input type="text" class="form-control formBorders" placeholder="youtube.com կայքի հղումը" name="yt_link">

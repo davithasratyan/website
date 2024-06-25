@@ -9,7 +9,12 @@
                 <textarea id="summernote" rows="150" class="form-control" name="article">@if($post->article){{$post->article}} @endif</textarea>
                 <script>
                     $(document).ready(function() {
-                        $('#summernote').summernote();
+                        $('#summernote').summernote({
+                            height: 600,
+                            minHeight: null,
+                            maxHeight: null,
+                            focus: true
+                        });
                     });
                 </script>
                 <input type="text" class="form-control formBorders" placeholder="youtube.com կայքի հղումը" name="yt_link" @if($post->yt_link) value="https://www.youtube.com/watch?v={{$post->yt_link}}" @endif>

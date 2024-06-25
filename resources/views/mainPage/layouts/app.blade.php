@@ -74,7 +74,7 @@
 
 <main>
     <div class="container–fluid">
-        <div class="row justify-content-between">
+        <div class="row justify-content-between px-4">
             <div class="col-md-3">
                 <section class="mt-2">
                     <!-- Yandex.RTB R-A-5980996-6 -->
